@@ -1,6 +1,6 @@
 module.exports = (sequlize, DataTypes) => {
 
-    const Ram = sequlize.define("Ram", {
+    const Rams = sequlize.define("Rams", {
         brand: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -26,14 +26,14 @@ module.exports = (sequlize, DataTypes) => {
             allowNull: false,
         },
         price: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         }
     });
 
-    Ram.associate = (models) => {
-        Ram.belongsTo(models.RamType)
+    Rams.associate = (models) => {
+        Rams.belongsTo(models.RamType)
     }
 
-    return Ram;
+    return Rams;
 }

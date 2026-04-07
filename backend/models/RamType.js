@@ -8,7 +8,7 @@ module.exports = (sequlize, DataTypes) => {
     });
 
     RamType.associate = (models) => {
-        RamType.hasMany(models.Ram)
+        RamType.hasMany(models.Rams)
     }
 
     return RamType;
