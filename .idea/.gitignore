@@ -3,3 +3,4 @@
 /workspace.xml
 /backend/.env
 .env
+node_modules
