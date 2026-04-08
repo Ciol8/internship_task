@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import * as Yup from 'yup'
 
 function EditRam() {
     let { id } = useParams();
@@ -12,9 +13,7 @@ function EditRam() {
     useEffect(() => {
         axios.get(`http://localhost:3001/rams/${id}`).then((response) => {
             setRamObject(response.data);
-        })
-    })
-    useEffect(() => {
+        });
         axios.get(`http://localhost:3001/ramtypes`).then((response) => {
             setRamType(response.data);
         })
@@ -24,31 +23,32 @@ function EditRam() {
         <>
             <div>
                 <div>
-                    Brand: <input></input>
+                    Brand: <input type='text' value={ramObject.brand} ></input>
                 </div>
                 <div>
-                    Model: <input></input>
+                    Model: <input type='text' value={ramObject.model}></input>
                 </div>
                 <div>
-                    <select></select>
+                    Type: <select>{ramType.map((value) => { return <option key={value.id}>{value.name}</option> })}</select>
                 </div>
                 <div>
-                    Clock Speed: <input></input>
+                    Clock Speed: <input value={ramObject.clockSpeed}></input>
                 </div>
                 <div>
-                    Size: <input></input>
+                    Size: <input value={ramObject.Size}></input>
                 </div>
                 <div>
-                    CAS Latency: <input></input>
+                    CAS Latency: <input value={ramObject.casLatency}></input>
                 </div>
                 <div>
                     ECC Status: <input type='checkbox'></input>
                 </div>
                 <div>
-                    Price: <input></input>
+                    Price: <input value={ramObject.price}></input>
                 </div>
 
             </div>
+            <button>Confirm changes</button>
         </>
     )
 

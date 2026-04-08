@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div className='navbar'>
-          <Link to="/createram">Create a ram</Link>
+          <Link to="/createram">Add RAM</Link>
           <Link to="/rams">Homepage</Link>
         </div>
         <Routes>
