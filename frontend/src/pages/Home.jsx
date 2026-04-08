@@ -26,7 +26,7 @@ function Home() {
                 </tr></thead>
                 <tbody>{listOfRams.map((value) => {
                     return (
-                        <tr key={value.id} className="ram" >
+                        <tr key={value.id} className="ram" onClick={() => { navigate(`/rams/${value.id}`) }}>
                             <td className='title'>{value.id} </td>
                             <td className='title'> {value.brand} </td>
                             <td className='body'> {value.model} </td>

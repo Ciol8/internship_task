@@ -17,7 +17,7 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     const id = req.params.id;
     const ram = req.body;
-    Rams.update({ brand: 'GOODRAM' },
+    await Rams.update(ram,
         { where: { id: id } }
     )
     res.json(ram);
