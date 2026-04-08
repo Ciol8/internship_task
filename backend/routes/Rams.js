@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { Rams, RamType } = require('../models');
+const { Rams, RamTypes } = require('../models');
 
 
 router.get("/", async (req, res) => {
-    const listOfRams = await Rams.findAll({ include: [RamType] });
+    const listOfRams = await Rams.findAll({ include: [RamTypes] });
     res.json(listOfRams);
 });
 
@@ -12,6 +12,15 @@ router.get('/:id', async (req, res) => {
     const id = req.params.id;
     const Ram = await Rams.findByPk(id);
     res.json(Ram);
+})
+
+router.put('/:id', async (req, res) => {
+    const id = req.params.id;
+    const ram = req.body;
+    Rams.update({ brand: 'GOODRAM' },
+        { where: { id: id } }
+    )
+    res.json(ram);
 })
 
 module.exports = router;

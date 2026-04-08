@@ -1,15 +1,15 @@
 module.exports = (sequlize, DataTypes) => {
 
-    const RamType = sequlize.define("RamType", {
+    const RamTypes = sequlize.define("RamTypes", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
     });
 
-    RamType.associate = (models) => {
-        RamType.hasMany(models.Rams)
+    RamTypes.associate = (models) => {
+        RamTypes.hasMany(models.Rams)
     }
 
-    return RamType;
+    return RamTypes;
 }

@@ -9,6 +9,9 @@ app.use(cors());
 const ramRouter = require('./routes/Rams');
 app.use("/rams", ramRouter);
 
+const ramTypeRouter = require('./routes/RamTypes');
+app.use("/ramtypes", ramTypeRouter);
+
 db.sequelize.sync().then(() => {
     app.listen(3001, () => {
         console.log("Server running on port 3001");

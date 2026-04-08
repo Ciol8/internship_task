@@ -32,7 +32,7 @@ module.exports = (sequlize, DataTypes) => {
     });
 
     Rams.associate = (models) => {
-        Rams.belongsTo(models.RamType)
+        Rams.belongsTo(models.RamTypes)
     }
 
     return Rams;
