@@ -14,7 +14,6 @@ A full-stack web application built for managing and editing RAM inventory data. 
 * **Vite** 
 * **Axios** 
 * **React Router Dom** 
-* **Yup** 
 
 ### Backend (Node.js / Express)
 * **Express.js** 
@@ -23,7 +22,6 @@ A full-stack web application built for managing and editing RAM inventory data. 
 * **Cors** 
 * **Nodemon** 
 * **dotenv** 
-
 
 ## Getting Started & Installation
 
@@ -46,11 +44,11 @@ Make sure you have the following installed on your machine:
 
 3. Create a .env file in the root of the backend directory and add your MySQL credentials:
 
-    DB_HOST=localhost
+    `DB_HOST=localhost
     DB_USER=root
     DB_PASSWORD=your_mysql_password
     DB_NAME=ram_inventory
-    PORT=3000
+    PORT=3001`
 
 4. Start the backend server:
 

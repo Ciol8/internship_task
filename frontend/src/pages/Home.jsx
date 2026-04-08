@@ -21,30 +21,28 @@ function Home() {
 
     return (
         <div>
+            <h2>RAM list</h2>
             <table>
                 <thead><tr>
                     <th>id</th>
                     <th>Brand</th>
                     <th>Model</th>
-                    <th>Price</th>
+                    <th>Type</th>
                 </tr></thead>
                 <tbody>{listOfRams.map((value) => {
                     return (
                         <tr key={value.id} className="ram" onClick={() => { navigate(`/rams/${value.id}`) }}>
-                            <td>{value.id} </td>
-                            <td > {value.brand} </td>
-                            <td > {value.model} </td>
+                            <td>{value.id}</td>
+                            <td >{value.brand}</td>
+                            <td >{value.model}</td>
                             <td>
                                 {ramType.find(body => body.id === value.RamTypeId)?.name}
                             </td>
                         </tr>
                     )
-                })}</tbody>
-
-
-
+                })}
+                </tbody>
             </table>
-
         </div>
     )
 }

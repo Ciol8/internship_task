@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.App {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #3498db;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.ram:hover {
+    background-color: #f1f8ff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form {
+    background-color: #fafafa;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+form label:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+strong {
+    color: #2c3e50;
+    display: inline-block;
+    min-width: 130px;
+}
